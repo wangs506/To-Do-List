@@ -22,9 +22,11 @@ $(document).ready(function(){
      $('#tasks').append('<li><input type="checkbox" id="check" /><span class="todoText">' + name +'</span>'+
   	 '<input type = "text" class = "editTodo">'+
   	'<input type="button" id = "editbutton" class="editbutton"value="edit">'+
-  	'<input type="button" id = "savebutton" class="savebutton"value="Save">'+
-   	'<input type="button" id="deletebutton" class= "deletebutton"value="Delete |">'+'<br/>');
-   		$("#newtask").val("")
+  	'<input type="button" id = "savebutton" class="savebutton"value="save">'+
+   	'<input type="button" id = "deletebutton" class= "deletebutton"value="delete |">'+
+   	'<br/>');
+     $("#newtask").val("")
+	 $(".btn5").show();
 
 	});
 	
@@ -44,8 +46,9 @@ $(document).ready(function(){
          		      	
 	// Remove all button
 	
-	$("#btn5").click(function(){
-      $('li').remove();  });
+	  $("#btn5").click(function(){
+      $('li').remove();
+      $(".btn5").hide(); });
     
 	// Delete button  
  	$('#tasks').on('click', '#deletebutton', function(){    

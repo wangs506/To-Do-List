@@ -41,6 +41,8 @@ function makeNewList() {
 	table.appendChild(tr);
 	editInput.style.visibility = "hidden"
   	document.getElementById("newtask").value = ""; // clean the input box
+  	btn5.style.display = "inline";
+
   	
   	//Delete one Task funtion
   	deleteButton.addEventListener ("click", function() {
@@ -54,6 +56,7 @@ function makeNewList() {
  		var editInput = listItem.querySelector("input[type=text]")
   		var label = listItem.querySelector("label");
    		label.innerText = editInput.value;
+   		
   		 
   	//Switch tasks between editable and show  	 
 	if(editInput.style.visibility == "hidden")
@@ -61,6 +64,7 @@ function makeNewList() {
 	    editInput.style.visibility = "visible";
 		label.style.display = "none";
 	    editButton.innerText = "Save";
+	    editInput.innerText = label.value;
 	    }
 
 	else
@@ -109,10 +113,12 @@ function makeNewList() {
     	});}
  
  //Delete all tsak funtion
- function DeleteList() {
-     var myNode = document.getElementById("tasks");
+ 	function DeleteList() {
+    var myNode = document.getElementById("tasks");
 	while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
+    btn5.style.display = "none";
+
     };}
 	
     	
