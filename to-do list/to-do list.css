@@ -1,0 +1,137 @@
+﻿body {
+  background: #fff;
+  list-style:square
+  color: #333;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  border-radius: 15px;
+}
+.round {border-radius: 15px;}
+
+.container {
+  display: block;
+  width: 400px;
+  margin: 100px auto ;
+  background-color:#F9F4E3;
+  cursor: pointer;
+  border-style:none;
+  border-radius: 50px;
+ -webkit-border-radius: 25px;
+ -moz-border-radius: 25px;
+  
+}
+
+
+
+input[type=text] {
+    width: 50%;
+    box-sizing: border-box;
+    border:solid #ccc;
+    border-radius: 1px;
+    font-size: 16px;
+    padding: 1px 1px 1px 1px;
+    margin:2px 2px;
+}
+
+.label[type=text]{
+	width:30%
+	position: relative
+}
+
+.button {
+    background: #e6e6fa ;
+    border: 1px solid green;;
+    padding: 5px 5px 5px 5px;
+    color: 	#000080;
+    border-radius: 3px;
+    text-shadow: 2px 2px 2px #87CEEB ;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px #3D3D3D;
+    box-shadow:3px 3px 3px #3D3D3D;
+    box-shadow:3px 3px 3px #3D3D3D;
+    margin: 2px 2px;
+    cursor: pointer;
+  
+     }
+ .button:hover {
+    color: #333;
+    background-color: #B0C4DE;
+	}
+   
+.editbutton{
+	
+	 background:transparent;
+	 border:0;
+  	 float: right;
+ 	
+ 	}
+         
+.editbutton:hover{
+	color:#cd4400;
+	} 
+	       
+.deletebutton{
+	
+	background:transparent;
+ 	border:0; 
+  	float: right;
+ 	 }
+  
+  .deletebutton:hover{
+	color:#cd4400;
+	}     
+  
+  
+li{
+	list-style:none;
+		
+	}
+ul{
+	
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  
+  
+.completed{
+	 text-decoration:line-through;
+	 opacity: 0.5;
+	 transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+	 
+}      
+	 
+
+.editTodo{
+	display:none;	
+}
+
+.savebutton{
+	display:none;
+	background:transparent;
+	border:0;
+ 	text-decoration: underline;
+ 	float: right;
+}
+.btn5{
+	display:none;
+ 	background: #e6e6fa ;
+    border: 1px solid green;;
+    padding: 5px 5px 5px 5px;
+    color: 	#000080;
+    border-radius: 3px;
+    text-shadow: 2px 2px 2px #87CEEB ;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px #3D3D3D;
+    box-shadow:3px 3px 3px #3D3D3D;
+    box-shadow:3px 3px 3px #3D3D3D;
+    margin: 2px 2px;
+    cursor: pointer;
+  
+     }
+ .btn5:hover {
+    color: #333;
+    background-color: #B0C4DE;
+	}
+
+
+}
