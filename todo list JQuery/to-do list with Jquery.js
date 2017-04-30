@@ -1,8 +1,8 @@
 ﻿
+// look for window.event in case event isn't passed in
 
 function KeyPress(e)
 {	
-    // look for window.event in case event isn't passed in
     e = e || window.event;
     if (e.keyCode == 13)
     {
@@ -35,7 +35,7 @@ $(document).ready(function(){
 	
 	
 	
-	//Edit input by click enter key
+//Edit input by click enter key
 	 
 	 $('#tasks').on('keyup', '.editTodo',(function(){
  	 if (event.keyCode == 13) {
@@ -49,17 +49,17 @@ $(document).ready(function(){
          		         		
          		   })); 
          		      	
-	// Remove all button
+// Remove all button
 	
 	  $("#btn5").click(function(){
       $('li').remove();
       $(".btn5").hide(); });
     
-	// Delete button  
+// Delete button  
  	$('#tasks').on('click', '#deletebutton', function(){    
  	$(this).parent('li').remove();});
  	
-	//Checkbox, it will be marked if it is cheked
+//Checkbox, it will be marked if it is cheked
 	$('#tasks').on('click', '#check', function(){  
             var $this = $(this);
             if (this.checked) {
@@ -69,7 +69,7 @@ $(document).ready(function(){
             }
         });     
      
-     //User can edit the tasks and save by pressing enter
+//User can edit the tasks and save by pressing enter
       $('#tasks').on("click", '#editbutton',function(){
       			      			
          		var text =$(this).parent().find('.todoText').text();
@@ -81,7 +81,7 @@ $(document).ready(function(){
          	
          	});
       
-	//The task can be edited and save by pressing save link  	   
+//The task can be edited and save by pressing save link  	   
       $('#tasks').on('click', '#savebutton',function(){
  	 
          		var text1 =$(this).parent().find('.editTodo').val();
