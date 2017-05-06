@@ -1,15 +1,14 @@
 ﻿
-// look for window.event in case event isn't passed in
 
 function KeyPress(e)
 {	
-    e = e || window.event;
+   
     if (e.keyCode == 13)
     {
         document.getElementById('button').click();
-        return false;
-    }
-    return true;
+            
+     }
+ 
 } 	
 
 
@@ -93,6 +92,5 @@ $(document).ready(function(){
          		      		
          		         		
          		   });
-       
-       f  		    	
-});
+      	    	
+		});
