@@ -10,36 +10,31 @@
 
 
 body {
-  background: #fff;
-  list-style:square
-  color: #333;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  border-radius: 15px;
 }
-.round {border-radius: 15px;}
 
 .container {
-  display: block;
+
   width: 400px;
   margin: 100px auto ;
   background-color:#F9F4E3;
-  cursor: pointer;
   border-style:none;
-  border-radius: 50px;
- -webkit-border-radius: 25px;
- -moz-border-radius: 25px;
-  
+  border-radius: 25px;
+   
 }
 
 li{
 	list-style:none;
+	position:relative;
+	padding: .5px;
+
 		
 	}
+	
 ul{
 	
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding: 1px;
   }
 
 
@@ -53,17 +48,15 @@ ul{
 
 input[type=text] {
     width: 50%;
-    box-sizing: border-box;
     border:solid #ccc;
     border-radius: 1px;
     font-size: 16px;
-    padding: 1px 1px 1px 1px;
-    margin:2px 2px;
-}
+    padding: 1px;
+    
+    }
 
-.label[type=text]{
-	width:30%
-	position: relative
+.label{
+	width:30%;	
 }
 
 
@@ -161,13 +154,33 @@ input[type=text] {
 	check box: #complete
 ==========================================================================================*/
 
+	  	
+@keyframes completed{
+from { margin-left: 30px;
+		width:20%; }
+  to   { 
+  		width:70% }  
+  }
 
-.completed{
-	 text-decoration:line-through;
-	 opacity: 0.5;
-	 transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-	 
-}      
+ .completed {
+  position: relative;
+  opacity: 0.5;
+  transition: all 0.7s;
+}
+.completed:after {
+  content: ' ';
+  position:absolute;
+  top: 50%;
+  left: 20;
+  right: 10;
+  width: 75%;
+  height: 1px;
+  background: black;
+  animation-name: completed;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+     
+}
 	 
 
 

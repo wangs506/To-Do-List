@@ -3,13 +3,10 @@
 function KeyPress(e)
 {
     
-    e = e || window.event;
-    if (e.keyCode == 13)
+   if (e.keyCode == 13)
     {
         document.getElementById('button').click();
-        return false;
     }
-    return true;
 }
 
  
@@ -23,13 +20,14 @@ function makeNewList() {
   	var tr = document.createElement("tr");
   	var checkBox = document.createElement("input");
   	var label = document.createElement("label");
-  	var editInput = document.createElement("input");
+  	var editText = document.createElement("input");
     var editButton = document.createElement("button");
    	var deleteButton = document.createElement("button");
   	checkBox.setAttribute("type", "checkbox");
-  	editInput.setAttribute("type", "text");
+
+  	editText.setAttribute("type", "text");
 	editButton.className="editbutton";
-	editButton.innerText = "Edit";
+	editButton.innerText = "edit";
 	deleteButton.innerText = "delete |";
 	deleteButton.className = "deletebutton";
 
@@ -39,12 +37,12 @@ function makeNewList() {
 	// Append to table
 	tr.appendChild(checkBox);
 	tr.appendChild(label);
-	tr.appendChild(editInput);
+	tr.appendChild(editText);
     tr.appendChild(editButton);
     tr.appendChild(deleteButton);
     label.innerText =Inputvalue;
 	table.appendChild(tr);
-	editInput.style.visibility = "hidden"
+	editText.style.visibility = "hidden"
   	document.getElementById("newtask").value = ""; // clean the input box
   	document.getElementById("newtask").focus();
   	btn5.style.display = "inline";
@@ -53,55 +51,55 @@ function makeNewList() {
   	//Delete one Task funtion
   	deleteButton.addEventListener ("click", function() {
   		var listItem = this.parentNode;
-  		var ul = listItem.parentNode;
-   		ul.removeChild(listItem);});
+  		var Table = listItem.parentNode;
+   		Table.removeChild(listItem);});
    
    //Edit one Task funtion
      editButton.addEventListener ('click', function(event) {
    		var listItem = this.parentNode;
- 		var editInput = listItem.querySelector("input[type=text]")
+ 		var editText = listItem.querySelector("input[type=text]")
   		var label = listItem.querySelector("label");
-   		label.innerText = editInput.value;
+   		label.innerText = editText.value;
    		
   		 
   	//Switch tasks between editable and show  	 
-	if(editInput.style.visibility == "hidden")
+	if(editText.style.visibility == "hidden")
 	{
-	    editInput.style.visibility = "visible";
+	    editText.style.visibility = "visible";
 		label.style.display = "none";
 	    editButton.innerText = "Save";
 	    }
 
 	else
 	{
-    	editInput.style.visibility = "hidden"
+    	editText.style.visibility = "hidden"
     	label.style.display = "inline";
     	editButton.innerText = "Edit";
     	}
   		 });
   		 
   //edit task and save it by pressing enter	 
-   editInput.addEventListener('keyup', function(e){
+   editText.addEventListener('keyup', function(e){
     if (e.keyCode == 13)
     {
     	var listItem = this.parentNode;
- 		var editInput = listItem.querySelector("input[type=text]")
+ 		var editText = listItem.querySelector("input[type=text]")
   		var label = listItem.querySelector("label");
-   		label.innerText = editInput.value;
+   		label.innerText = editText.value;
   		 
-    if(editInput.style.visibility == "hidden")
+    if(editText.style.visibility == "hidden")
 	{
-	    editInput.style.visibility = "visible";
+	    editText.style.visibility = "visible";
 		label.style.display = "none";
 	    editButton.innerText = "Save";
 	    
 	    }
 	else
 	{
-    	editInput.style.visibility = "hidden"
+    	editText.style.visibility = "hidden"
     	label.style.display = "inline";
     	editButton.innerText = "Edit";
-    	editInput.innerText = label.value;
+    	editText.innerText = label.value;
     	}
 
       
